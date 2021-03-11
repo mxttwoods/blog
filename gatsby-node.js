@@ -1,8 +1,4 @@
-/**
- * @format
- * @type { module }
- */
-
+/** @format @type { module } */
 const path = require(`path`);
 
 /** @type { module } */
