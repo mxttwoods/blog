@@ -1,5 +1,5 @@
 /**
- * /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css
+ * normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css
  *
  * @format
  */
@@ -67,7 +67,7 @@ hr {
 
 pre {
   /* 1 */
-  /* font-family: monospace, monospace;  */
+  font-family: monospace, monospace;
   font-size: 1em; /* 2 */
 }
 
@@ -111,7 +111,7 @@ code,
 kbd,
 samp {
   /* 1 */
-  /* font-family: monospace, monospace;  */
+  font-family: monospace, monospace;
   font-size: 1em; /* 2 */
 }
 
