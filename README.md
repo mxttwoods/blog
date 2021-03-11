@@ -72,4 +72,4 @@ static/**                 # static files
 Copyright © 2021 [Matthew Woods](https://github.com/mxttwoods).
 
 This project is
-[MIT](https://github.com/mxttwoods/matthewwoods/blob/master/LICENSE) licensed.
+[MIT](https://github.com/mxttwoods/blog/blob/master/LICENSE) licensed.
