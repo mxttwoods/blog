@@ -1,5 +1,5 @@
 /** @format @type { module } */
-const path = require(`path`);
+const path = require('path');
 
 /** @type { module } */
 const { createFilePath } = require(`gatsby-source-filesystem`);
@@ -15,8 +15,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions;
 
   // Define a template for blog post
-  /** @type { object } */
-  const blogPost = path.resolve(`./src/templates/blog-post.jsx`);
+  /** @type { * } */
+  const blogPost = path.resolve(`./src/templates/blog-post.tsx`);
 
   // Get all markdown blog posts sorted by date
   /** @type { * } */

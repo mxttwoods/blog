@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 
 /**
  * @param { * } { location, title, children }
- * @return { object }
+ * @return { * }
  */
 const Layout = ({ location, title, children }) => {
   /** @type { string } */

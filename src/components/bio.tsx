@@ -10,7 +10,7 @@ import { StaticImage } from 'gatsby-plugin-image';
  *
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  *
- * @return { object } data
+ * @return { * } data
  */
 const Bio = () => {
   /** @type { * } */

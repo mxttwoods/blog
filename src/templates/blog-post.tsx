@@ -98,7 +98,7 @@ export default BlogPostTemplate;
  *
  * See: https://www.gatsbyjs.com/docs/reference/graphql-data-layer/
  *
- * @return { object } pageQuery
+ * @return { * } pageQuery
  */
 export const pageQuery = graphql`
   query BlogPostBySlug(

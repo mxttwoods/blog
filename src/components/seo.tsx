@@ -11,7 +11,7 @@ import { useStaticQuery, graphql } from 'gatsby';
  *
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  *
- * @return { object } site
+ * @return { * } site
  */
 const SEO = ({ description, lang, meta, title }) => {
   /** @type { * } */

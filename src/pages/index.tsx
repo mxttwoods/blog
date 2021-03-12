@@ -18,7 +18,7 @@ import SEO from '../components/seo';
 const BlogIndex = ({ data, location }) => {
   /** @type { string } */
   const siteTitle = data.site.siteMetadata?.title || `Title`;
-  /** @type { object } */
+  /** @type { * } */
   const posts = data.allMarkdownRemark.nodes;
 
   // if no posts
@@ -98,7 +98,7 @@ export default BlogIndex;
  *
  * See: https://www.gatsbyjs.com/docs/reference/graphql-data-layer/
  *
- * @return { object } pageQuery
+ * @return { * } pageQuery
  */
 export const pageQuery = graphql`
   query {
