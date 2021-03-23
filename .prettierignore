@@ -1,4 +1,4 @@
-public
-node_modules
-.cache
-.eslintcache
+# Add files here to ignore them from prettier formatting
+
+/dist
+/coverage

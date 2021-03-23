@@ -1,75 +1,113 @@
-<!-- @format -->
+# Blog
 
-# @mxttwoods/blog
+This project was generated using [Nx](https://nx.dev).
 
-[![Renovate Enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovatebot.com/)
-[![CodeFactor](https://www.codefactor.io/repository/github/mxttwoods/blog/badge)](https://www.codefactor.io/repository/github/mxttwoods/blog)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/16a8cdbc-5655-4aeb-b6ed-ba6a41faca53/deploy-status)](https://app.netlify.com/sites/mxttwoods-blog/deploys)
-[![Nodejs Ubuntu CI/CD](https://github.com/mxttwoods/blog/actions/workflows/ubuntu-latest.yml/badge.svg)](https://github.com/mxttwoods/blog/actions/workflows/ubuntu-latest.yml)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Twitter: mxttwoods](https://img.shields.io/twitter/follow/mxttwoods.svg?style=social)](https://twitter.com/mxttwoods)
+<p align="center"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>
 
-> A blog powered by Gatsby and Markdown
+🔎 **Nx is a set of Extensible Dev Tools for Monorepos.**
 
-- [@mxttwoods/blog](#mxttwoodsblog)
-  - [Homepage](#homepage)
-  - [Install](#install)
-  - [Usage](#usage)
-  - [Start](#start)
-  - [Structure](#structure)
-  - [Author](#author)
-  - [License](#license)
+- [Blog](#blog)
+  - [Quick Start & Documentation](#quick-start--documentation)
+  - [Adding capabilities to your workspace](#adding-capabilities-to-your-workspace)
+  - [Generate an application](#generate-an-application)
+  - [Generate a library](#generate-a-library)
+  - [Development server](#development-server)
+  - [Code scaffolding](#code-scaffolding)
+  - [Build](#build)
+  - [Running unit tests](#running-unit-tests)
+  - [Running end-to-end tests](#running-end-to-end-tests)
+  - [Understand your workspace](#understand-your-workspace)
+  - [Further help](#further-help)
+  - [☁ Nx Cloud](#-nx-cloud)
+    - [Computation Memoization in the Cloud](#computation-memoization-in-the-cloud)
 
-## [Homepage](https://matthew.codes)
+## Quick Start & Documentation
 
-## Install
+[Nx Documentation](https://nx.dev/angular)
 
-```bash
-yarn install
-```
+[10-minute video showing all Nx features](https://nx.dev/angular/getting-started/what-is-nx)
 
-## Usage
+[Interactive Tutorial](https://nx.dev/angular/tutorial/01-create-application)
 
-```bash
-yarn build
-```
+## Adding capabilities to your workspace
 
-## Start
+Nx supports many plugins which add capabilities for developing different types of applications and different tools.
 
-```bash
-yarn start
-```
+These capabilities include generating applications, libraries, etc as well as the devtools to test, and build projects as well.
 
-## Structure
+Below are our core plugins:
 
-```bash
-.github/**                # ci/cd
-.husky/**                 # git hooks
-content/blog/             # blog content
-    a11y/**                   # blog post
-    pubsub/**                 # blog post
-    readme-cli/**             # blog post
-    woods-engineering/**      # blog post
-src/                      # gatsby source
-    components/**             # react components
-    images/**                 # images
-    pages/**                  # routes
-    templates/**              # blog post templates
-static/**                 # static files
-```
+- [Angular](https://angular.io)
+  - `ng add @nrwl/angular`
+- [React](https://reactjs.org)
+  - `ng add @nrwl/react`
+- Web (no framework frontends)
+  - `ng add @nrwl/web`
+- [Nest](https://nestjs.com)
+  - `ng add @nrwl/nest`
+- [Express](https://expressjs.com)
+  - `ng add @nrwl/express`
+- [Node](https://nodejs.org)
+  - `ng add @nrwl/node`
 
-## Author
+There are also many [community plugins](https://nx.dev/nx-community) you could add.
 
-**Matthew Woods**
+## Generate an application
 
-- Website: <https://matthew.codes>
-- Twitter: [@mxttwoods](https://twitter.com/mxttwoods)
-- Github: [@mxttwoods](https://github.com/mxttwoods)
-- LinkedIn: [@matthew-t-woods](https://linkedin.com/in/matthew-t-woods)
+Run `ng g @nrwl/angular:app my-app` to generate an application.
 
-## License
+> You can use any of the plugins above to generate applications as well.
 
-Copyright © 2021 [Matthew Woods](https://github.com/mxttwoods).
+When using Nx, you can create multiple applications and libraries in the same workspace.
 
-This project is
-[MIT](https://github.com/mxttwoods/blog/blob/master/LICENSE) licensed.
+## Generate a library
+
+Run `ng g @nrwl/angular:lib my-lib` to generate a library.
+
+> You can also use any of the plugins above to generate libraries as well.
+
+Libraries are shareable across libraries and applications. They can be imported from `@blog/mylib`.
+
+## Development server
+
+Run `ng serve my-app` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
+
+## Code scaffolding
+
+Run `ng g component my-component --project=my-app` to generate a new component.
+
+## Build
+
+Run `ng build my-app` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+
+## Running unit tests
+
+Run `ng test my-app` to execute the unit tests via [Jest](https://jestjs.io).
+
+Run `nx affected:test` to execute the unit tests affected by a change.
+
+## Running end-to-end tests
+
+Run `ng e2e my-app` to execute the end-to-end tests via [Cypress](https://www.cypress.io).
+
+Run `nx affected:e2e` to execute the end-to-end tests affected by a change.
+
+## Understand your workspace
+
+Run `nx dep-graph` to see a diagram of the dependencies of your projects.
+
+## Further help
+
+Visit the [Nx Documentation](https://nx.dev/angular) to learn more.
+
+## ☁ Nx Cloud
+
+### Computation Memoization in the Cloud
+
+<p align="center"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-cloud-card.png"></p>
+
+Nx Cloud pairs with Nx in order to enable you to build and test code more rapidly, by up to 10 times. Even teams that are new to Nx can connect to Nx Cloud and start saving time instantly.
+
+Teams using Nx gain the advantage of building full-stack applications with their preferred framework alongside Nx’s advanced code generation and project dependency graph, plus a unified experience for both frontend and backend developers.
+
+Visit [Nx Cloud](https://nx.app/) to learn more.
