@@ -35,35 +35,35 @@ jobs:
           name: public
           path: public
 
-  # deploy app
-  deploy:
-    # simple description
-    name: Deploy
-    # requires build step to start
-    needs: build
-    # runner os
-    runs-on: ubuntu-latest
-    steps:
-      # checkout repo
-      - name: Checkout
-        uses: actions/checkout@master
-      # download build artifact
-      - name: Download
-        uses: actions/download-artifact@master
-        with:
-          name: public
-          path: public
-      # This command deploys your Hosting content and config to the following Firebase-provisioned subdomains:
-      #
-      # PROJECT_ID.web.app
-      # PROJECT_ID.firebaseapp.com
-      #
-      # $ firebase deploy --only hosting
-      #
-      - name: Deploy
-        uses: w9jds/firebase-action@master
-        with:
-          args: deploy
-        # firebase token for deploy
-        env:
-          FIREBASE_TOKEN: ${{secrets.FIREBASE_TOKEN}}
+#   # deploy app
+#   deploy:
+#     # simple description
+#     name: Deploy
+#     # requires build step to start
+#     needs: build
+#     # runner os
+#     runs-on: ubuntu-latest
+#     steps:
+#       # checkout repo
+#       - name: Checkout
+#         uses: actions/checkout@master
+#       # download build artifact
+#       - name: Download
+#         uses: actions/download-artifact@master
+#         with:
+#           name: public
+#           path: public
+#       # This command deploys your Hosting content and config to the following Firebase-provisioned subdomains:
+#       #
+#       # PROJECT_ID.web.app
+#       # PROJECT_ID.firebaseapp.com
+#       #
+#       # $ firebase deploy --only hosting
+#       #
+#       - name: Deploy
+#         uses: w9jds/firebase-action@master
+#         with:
+#           args: deploy
+#         # firebase token for deploy
+#         env:
+#           FIREBASE_TOKEN: ${{secrets.FIREBASE_TOKEN}}
