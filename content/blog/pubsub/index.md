@@ -15,14 +15,12 @@ description: A tiny, fast, zero-dependency event bus for JavaScript
 Just download index.js, or use one of the following options:
 
 ```bash
-# install from npm
 yarn add @mxttwoods/pubsub
 ```
 
 or
 
 ```bash
-# install from github
 yarn add @mxttwoods/pubsub --registry=https://npm.pkg.github.com/mxttwoods
 ```
 
@@ -31,7 +29,7 @@ yarn add @mxttwoods/pubsub --registry=https://npm.pkg.github.com/mxttwoods
 Create an PubSub instance.
 
 ```javascript
-const emitter = new PubSub()
+const emitter = new PubSub();
 ```
 
 Then, add handlers as you see fit.
@@ -39,12 +37,12 @@ Then, add handlers as you see fit.
 ```javascript
 // add handler
 emitter.on('my-event', (data) => {
-  alert('got ' + data)
-})
+  alert('got ' + data);
+});
 
 emitter.on('my-event', (data) => {
-  console.log('got ' + data)
-})
+  console.log('got ' + data);
+});
 ```
 
 Remove handlers using `off`.
@@ -52,11 +50,11 @@ Remove handlers using `off`.
 ```javascript
 // remove handler
 function myHandler(data) {
-  console.log(data)
+  console.log(data);
 }
 
-emitter.on('my-event', myHandler)
-emitter.off('my-event', myHandler)
+emitter.on('my-event', myHandler);
+emitter.off('my-event', myHandler);
 ```
 
 Trigger events using `emit`.
@@ -64,7 +62,7 @@ Trigger events using `emit`.
 ```javascript
 // the second parameter here is the data you wish to
 // pass to the event handlers
-emitter.emit('my-event', { myHandler: 'Bar' })
+emitter.emit('my-event', { myHandler: 'Bar' });
 ```
 
 If you want a handler to only run once, you can do this:
@@ -72,9 +70,9 @@ If you want a handler to only run once, you can do this:
 ```javascript
 // on then off
 emitter.on('my-event', function myHandler() {
-  emitter.off('my-event', myHandler)
-  console.log('it worked')
-})
+  emitter.off('my-event', myHandler);
+  console.log('it worked');
+});
 ```
 
 You can register for multiple events at once like this:
@@ -82,11 +80,11 @@ You can register for multiple events at once like this:
 ```javascript
 // multiple handlers
 function myHandler(data) {
-  console.log(data)
+  console.log(data);
 }
 
-emitter.on('event1 event2 etc', myHandler)
-emitter.off('event1 event2 etc', myHandler)
+emitter.on('event1 event2 etc', myHandler);
+emitter.off('event1 event2 etc', myHandler);
 ```
 
 Stopping propagation isn't build into PubSub. You can work around this
@@ -95,18 +93,18 @@ limitation by doing something like this:
 ```javascript
 // stop propagation
 function stopPropagation() {
-  const superOn = PubSub.prototype.on
+  const superOn = PubSub.prototype.on;
 
   PubSub.prototype.on = (names, fn) => {
     superOn.call(this, names, (data) => {
       if (!data.isCanceled) {
-        return fn(data)
+        return fn(data);
       }
-      return true
-    })
-  }
+      return true;
+    });
+  };
 }
-stopPropagation()
+stopPropagation();
 ```
 
 With the above patch in place, you can do something like this in your event
@@ -115,30 +113,10 @@ handlers:
 ```javascript
 // now, no downstream handlers should be invoked
 emitter.on('my-event', (data) => {
-  data.isCanceled = true
-})
+  data.isCanceled = true;
+});
 ```
 
-### Development
-
-#### Install
-
-```bash
-yarn install
-```
-
-#### Build
-
-```bash
-yarn build
-```
-
-#### Test
-
-```bash
-yarn test
-```
-
-### License
+#### License
 
 This project is [MIT](https://github.com/mxttwoods/pubsub/blob/master/LICENSE) licensed.

@@ -89,7 +89,7 @@ Looking for more guidance? Full documentation for Gatsby lives
 > You can also write code blocks here!
 
 ```js
-const matthew = 'a software developer'
+const matthew = 'a software developer';
 ```
 
 | Number | Title                                    | Year |

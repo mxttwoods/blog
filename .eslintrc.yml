@@ -7,6 +7,7 @@ extends:
   - 'plugin:react/recommended'
   - airbnb
   - prettier
+  - google
 parserOptions:
   ecmaFeatures:
     jsx: true
@@ -14,4 +15,10 @@ parserOptions:
   sourceType: module
 plugins:
   - react
-rules: {}
+rules:
+  {
+    react/jsx-filename-extension: 0,
+    import/extensions: 0,
+    import/no-unresolved: 0,
+    react/no-danger: 0,
+  }

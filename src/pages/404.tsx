@@ -1,12 +1,12 @@
 /* eslint-disable react/no-unescaped-entities */
 
-import * as React from 'react'
-import { graphql } from 'gatsby'
-import PropTypes from 'prop-types'
+import * as React from 'react';
+import { graphql } from 'gatsby';
+import PropTypes from 'prop-types';
 
 // import components
-import Layout from '../components/layout'
-import SEO from '../components/seo'
+import Layout from '../components/layout';
+import SEO from '../components/seo';
 
 /**
  * ErrorIndex
@@ -15,8 +15,7 @@ import SEO from '../components/seo'
  * @return { * }
  */
 const ErrorIndex = ({ data, location }) => {
-  /** @type { string } */
-  const siteTitle = data.site.siteMetadata.title
+  const siteTitle = data.site.siteMetadata.title;
 
   // return html
   return (
@@ -28,22 +27,22 @@ const ErrorIndex = ({ data, location }) => {
         <a href='/'>here</a>
       </p>
     </Layout>
-  )
-}
+  );
+};
 
 // prop types
 ErrorIndex.defaultProps = {
   data: PropTypes.string,
-  location: PropTypes.string
-}
+  location: PropTypes.string,
+};
 
 // prop types
 ErrorIndex.propTypes = {
   data: PropTypes.string,
-  location: PropTypes.string
-}
+  location: PropTypes.string,
+};
 
-export default ErrorIndex
+export default ErrorIndex;
 
 /**
  * ErrorIndex component that queries for siteMetadata
@@ -61,4 +60,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

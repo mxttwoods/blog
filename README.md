@@ -48,7 +48,7 @@ yarn start
 content/blog/             # blog content
     a11y/**                   # blog post
     pubsub/**                 # blog post
-    readme-cli/**             # blog post
+    readme/**             # blog post
     woods-engineering/**      # blog post
 src/                      # gatsby source
     components/**             # react components

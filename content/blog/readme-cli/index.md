@@ -1,29 +1,27 @@
 ---
-title: readme-cli
+title: readme
 date: '2021-01-01'
 description: A cli that generates README.md files
 ---
 
 <!-- @format -->
 
-> [a cli that generates README.md files](https://www.npmjs.com/package/@mxttwoods/readme-cli)
+> [a cli that generates README.md files](https://www.npmjs.com/package/@mxttwoods/readme)
 
 ### Installation
 
-[@mxttwoods/readme-cli](https://www.npmjs.com/package/@mxttwoods/readme-cli)
+[@mxttwoods/readme](https://www.npmjs.com/package/@mxttwoods/readme)
 
 Use global installation (optional):
 
 ```bash
-# install globally
-npm i -g @mxttwoods/readme-cli
+npm i -g @mxttwoods/readme
 ```
 
 then
 
 ```bash
-# use the cli
-readme-cli
+readme
 ```
 
 ### Usage
@@ -35,45 +33,22 @@ Make sure you have [npx](https://www.npmjs.com/package/npx) installed
 Run the following command at the root of your project and answer the questions:
 
 ```bash
-# use with questionnaire
-npx @mxttwoods/readme-cli
+npx @mxttwoods/readme
 ```
 
 Use default values for all questions (`-y`):
 
 ```bash
-# use without questionnaire
-npx @mxttwoods/readme-cli -y
+npx @mxttwoods/readme -y
 ```
 
 Use your own `ejs` README template (`-p`):
 
 ```bash
-# user with your own template
-npx @mxttwoods/readme-cli -p path/to/my/own/template.md
+npx @mxttwoods/readme -p path/to/my/own/template.md
 ```
 
-### Development
-
-#### Install
-
-```bash
-yarn install
-```
-
-#### Build
-
-```bash
-yarn build
-```
-
-#### Test
-
-```bash
-yarn test
-```
-
-### License
+#### License
 
 This project is
-[MIT](https://github.com/mxttwoods/readme-cli/blob/master/LICENSE) licensed.
+[MIT](https://github.com/mxttwoods/readme/blob/master/LICENSE) licensed.

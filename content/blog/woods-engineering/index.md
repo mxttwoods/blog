@@ -29,6 +29,6 @@ You can find all my work on Github at [@mxttwoods](https://github.com/mxttwoods)
 
 [@mxttwoods/pubsub](/pubsub/)
 
-[@mxttwoods/readme-cli](/readme-cli/)
+[@mxttwoods/readme](/readme/)
 
 > **Feel free to contact me at: [mxttwoods@gmail.com](mailto:mxttwoods@gmail.com)**
