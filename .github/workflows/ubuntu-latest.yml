@@ -9,7 +9,7 @@ on:
 
 # workflow
 jobs:
-  # build gatsby
+  # build app
   build:
     # simple description
     name: Build
@@ -17,26 +17,16 @@ jobs:
     runs-on: ubuntu-latest
     # cache build artifacts
     steps:
-      - name: Caching Gatsby
-        id: gatsby-cache-build
-        uses: actions/cache@master
-        with:
-          path: |
-            public
-            .cache
-          key: ${{ runner.os }}-gatsby-build-${{ github.run_id }}
-          restore-keys: ${{ runner.os }}-gatsby-build-
       # check out repo
       - name: Checkout
         uses: actions/checkout@master
       # install node_modules
       - name: Install
         run: yarn install
-      # build gatsby
+      # build app
       - name: Build
         run: yarn build
         env:
-          GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES: true
           NODE_ENV: production
       # archive production artifact for build step
       - name: Archive
@@ -45,7 +35,7 @@ jobs:
           name: public
           path: public
 
-  # deploy gatsby
+  # deploy app
   deploy:
     # simple description
     name: Deploy

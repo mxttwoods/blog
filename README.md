@@ -9,14 +9,13 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Twitter: mxttwoods](https://img.shields.io/twitter/follow/mxttwoods.svg?style=social)](https://twitter.com/mxttwoods)
 
-> A blog powered by Gatsby and Markdown
+> A blog powered by Next.js and Markdown
 
 - [@mxttwoods/blog](#mxttwoodsblog)
   - [Homepage](#homepage)
   - [Install](#install)
   - [Usage](#usage)
   - [Start](#start)
-  - [Structure](#structure)
   - [Author](#author)
   - [License](#license)
 
@@ -38,24 +37,6 @@ yarn build
 
 ```bash
 yarn start
-```
-
-## Structure
-
-```bash
-.github/**                # ci/cd
-.husky/**                 # git hooks
-content/blog/             # blog content
-    a11y/**                   # blog post
-    pubsub/**                 # blog post
-    readme-cli/**             # blog post
-    woods-engineering/**      # blog post
-src/                      # gatsby source
-    components/**             # react components
-    images/**                 # images
-    pages/**                  # routes
-    templates/**              # blog post templates
-static/**                 # static files
 ```
 
 ## Author
