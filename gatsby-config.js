@@ -10,7 +10,7 @@ module.exports = {
     },
     description: "Matthew Woods's Personal Blog",
     siteUrl: 'https://matthew.codes',
-    social: { email: 'mailto:mxttwoods', twitter: 'mxttwoods' },
+    social: { email: 'mailto:mxttwoods@gmail.com', twitter: 'mxttwoods' },
   },
   // gatsby plugins
   plugins: [
