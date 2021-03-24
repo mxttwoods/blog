@@ -6,7 +6,7 @@ description: A cli that generates README.md files
 
 <!-- @format -->
 
-> [a cli that generates README.md files](https://www.npmjs.com/package/@mxttwoods/readme)
+> [A cli that generates README.md files](https://www.npmjs.com/package/@mxttwoods/readme)
 
 ### Installation
 
