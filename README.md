@@ -47,9 +47,7 @@ yarn start
 .husky/**                 # git hooks
 content/blog/             # blog content
     a11y/**                   # blog post
-    pubsub/**                 # blog post
-    readme/**             # blog post
-    woods-engineering/**      # blog post
+    readme-cli/**             # blog post
 src/                      # gatsby source
     components/**             # react components
     images/**                 # images
