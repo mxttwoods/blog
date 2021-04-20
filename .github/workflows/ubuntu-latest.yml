@@ -72,7 +72,7 @@ jobs:
       # $ firebase deploy --only hosting
       #
       - name: Deploy
-        uses: w9jds/firebase-action@2.0.0
+        uses: w9jds/firebase-action@v2.0.0
         with:
           args: deploy
         # firebase token for deploy
