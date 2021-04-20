@@ -19,7 +19,7 @@ jobs:
     steps:
       - name: Caching Gatsby
         id: gatsby-cache-build
-        uses: actions/cache@master
+        uses: actions/cache@v2
         with:
           path: |
             public
@@ -28,7 +28,7 @@ jobs:
           restore-keys: ${{ runner.os }}-gatsby-build-
       # check out repo
       - name: Checkout
-        uses: actions/checkout@master
+        uses: actions/checkout@v2
       # install node_modules
       - name: Install
         run: yarn install
@@ -40,7 +40,7 @@ jobs:
           NODE_ENV: production
       # archive production artifact for build step
       - name: Archive
-        uses: actions/upload-artifact@master
+        uses: actions/upload-artifact@v2
         with:
           name: public
           path: public
@@ -56,14 +56,15 @@ jobs:
     steps:
       # checkout repo
       - name: Checkout
-        uses: actions/checkout@master
+        uses: actions/checkout@v2
       # download build artifact
       - name: Download
-        uses: actions/download-artifact@master
+        uses: actions/download-artifact@v2
         with:
           name: public
           path: public
-      # This command deploys your Hosting content and config to the following Firebase-provisioned subdomains:
+      # This command deploys your Hosting content and config
+      # to the following Firebase-provisioned subdomains:
       #
       # PROJECT_ID.web.app
       # PROJECT_ID.firebaseapp.com
@@ -71,7 +72,7 @@ jobs:
       # $ firebase deploy --only hosting
       #
       - name: Deploy
-        uses: w9jds/firebase-action@master
+        uses: w9jds/firebase-action@2.0.0
         with:
           args: deploy
         # firebase token for deploy

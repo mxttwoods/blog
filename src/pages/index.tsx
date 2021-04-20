@@ -1,13 +1,13 @@
 /* eslint-disable react/no-unescaped-entities */
 
-import * as React from 'react';
-import { Link, graphql } from 'gatsby';
-import PropTypes from 'prop-types';
+import * as React from 'react'
+import { Link, graphql } from 'gatsby'
+import PropTypes from 'prop-types'
 
 // import components
-import Bio from '../components/bio';
-import Layout from '../components/layout';
-import SEO from '../components/seo';
+import Bio from '../components/bio'
+import Layout from '../components/layout'
+import SEO from '../components/seo'
 
 /**
  * BlogIndex
@@ -16,9 +16,9 @@ import SEO from '../components/seo';
  * @return { * }
  */
 const BlogIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata?.title || `Title`;
+  const siteTitle = data.site.siteMetadata?.title || `Title`
 
-  const posts = data.allMarkdownRemark.nodes;
+  const posts = data.allMarkdownRemark.nodes
 
   // if no posts
   if (posts.length === 0) {
@@ -33,7 +33,7 @@ const BlogIndex = ({ data, location }) => {
           gatsby-config.js).
         </p>
       </Layout>
-    );
+    )
   }
   // otherwise return all posts (html)
   return (
@@ -42,7 +42,7 @@ const BlogIndex = ({ data, location }) => {
       <Bio />
       <ol style={{ listStyle: `none` }}>
         {posts.map((post) => {
-          const title = post.frontmatter.title || post.fields.slug;
+          const title = post.frontmatter.title || post.fields.slug
 
           return (
             <li key={post.fields.slug}>
@@ -62,33 +62,33 @@ const BlogIndex = ({ data, location }) => {
                 <section>
                   <p
                     dangerouslySetInnerHTML={{
-                      __html: post.frontmatter.description || post.excerpt,
+                      __html: post.frontmatter.description || post.excerpt
                     }}
                     itemProp='description'
                   />
                 </section>
               </article>
             </li>
-          );
+          )
         })}
       </ol>
     </Layout>
-  );
-};
+  )
+}
 
 // prop types
 BlogIndex.defaultProps = {
   data: PropTypes.string,
-  location: PropTypes.string,
-};
+  location: PropTypes.string
+}
 
 // prop types
 BlogIndex.propTypes = {
   data: PropTypes.string,
-  location: PropTypes.string,
-};
+  location: PropTypes.string
+}
 
-export default BlogIndex;
+export default BlogIndex
 
 /**
  * BlogIndex component that queries for data
@@ -119,4 +119,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`
