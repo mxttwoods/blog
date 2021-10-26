@@ -54,7 +54,7 @@
   "devDependencies": {
     "@commitlint/cli": "13.2.1",
     "@commitlint/config-conventional": "13.2.0",
-    "@types/node": "14.17.31",
+    "@types/node": "14.17.32",
     "@types/react": "17.0.32",
     "@types/react-dom": "17.0.10",
     "eslint": "7.32.0",
