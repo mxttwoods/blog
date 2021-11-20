@@ -1,5 +1,3 @@
-/** @format */
-
 module.exports = {
   // main data for pages to query
   siteMetadata: {

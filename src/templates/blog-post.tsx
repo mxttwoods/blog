@@ -1,5 +1,3 @@
-/** @format */
-
 import * as React from 'react';
 import { Link, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
