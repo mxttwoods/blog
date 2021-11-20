@@ -1,13 +1,13 @@
 /** @format */
 
-import * as React from 'react'
-import { Link, graphql } from 'gatsby'
-import PropTypes from 'prop-types'
+import * as React from 'react';
+import { Link, graphql } from 'gatsby';
+import PropTypes from 'prop-types';
 
 // import components
-import Bio from '../components/bio'
-import Layout from '../components/layout'
-import SEO from '../components/seo'
+import Bio from '../components/bio';
+import Layout from '../components/layout';
+import SEO from '../components/seo';
 
 /**
  * BlogPostTemplate
@@ -16,11 +16,11 @@ import SEO from '../components/seo'
  * @return { * }
  */
 const BlogPostTemplate = ({ data, location }) => {
-  const post = data.markdownRemark
+  const post = data.markdownRemark;
 
-  const siteTitle = data.site.siteMetadata?.title || `Title`
+  const siteTitle = data.site.siteMetadata?.title || `Title`;
 
-  const { previous, next } = data
+  const { previous, next } = data;
 
   // return html
   return (
@@ -74,22 +74,22 @@ const BlogPostTemplate = ({ data, location }) => {
         </ul>
       </nav>
     </Layout>
-  )
-}
+  );
+};
 
 // prop types
 BlogPostTemplate.defaultProps = {
   data: PropTypes.string,
   location: PropTypes.string
-}
+};
 
 // prop types
 BlogPostTemplate.propTypes = {
   data: PropTypes.string,
   location: PropTypes.string
-}
+};
 
-export default BlogPostTemplate
+export default BlogPostTemplate;
 
 /**
  * BlogPostTemplate component that queries for data
@@ -137,4 +137,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

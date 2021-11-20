@@ -1,9 +1,9 @@
 /** @format */
 
-import * as React from 'react'
-import PropTypes from 'prop-types'
-import { Helmet } from 'react-helmet'
-import { useStaticQuery, graphql } from 'gatsby'
+import * as React from 'react';
+import PropTypes from 'prop-types';
+import { Helmet } from 'react-helmet';
+import { useStaticQuery, graphql } from 'gatsby';
 
 /**
  * SEO component that queries for data with
@@ -28,11 +28,11 @@ const SEO = ({ description, lang, meta, title }) => {
         }
       }
     `
-  )
+  );
 
-  const metaDescription = description || site.siteMetadata.description
+  const metaDescription = description || site.siteMetadata.description;
 
-  const defaultTitle = site.siteMetadata?.title
+  const defaultTitle = site.siteMetadata?.title;
 
   // return html
   return (
@@ -77,15 +77,15 @@ const SEO = ({ description, lang, meta, title }) => {
         }
       ].concat(meta)}
     />
-  )
-}
+  );
+};
 
 // prop types
 SEO.defaultProps = {
   lang: `en`,
   meta: [],
   description: ``
-}
+};
 
 // prop types
 SEO.propTypes = {
@@ -93,6 +93,6 @@ SEO.propTypes = {
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired
-}
+};
 
-export default SEO
+export default SEO;

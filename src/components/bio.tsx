@@ -1,8 +1,8 @@
 /** @format */
 
-import * as React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
-import { StaticImage } from 'gatsby-plugin-image'
+import * as React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
+import { StaticImage } from 'gatsby-plugin-image';
 
 /**
  * Bio component that queries for data
@@ -27,10 +27,10 @@ const Bio = () => {
         }
       }
     }
-  `)
+  `);
 
   // Set these values by editing "siteMetadata" in gatsby-config.js
-  const { author, social } = data.site.siteMetadata
+  const { author, social } = data.site.siteMetadata;
 
   // return html
   return (
@@ -59,7 +59,7 @@ const Bio = () => {
         </p>
       )}
     </div>
-  )
-}
+  );
+};
 
-export default Bio
+export default Bio;

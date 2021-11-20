@@ -1,8 +1,8 @@
 /** @format */
 
-import * as React from 'react'
-import { Link } from 'gatsby'
-import PropTypes from 'prop-types'
+import * as React from 'react';
+import { Link } from 'gatsby';
+import PropTypes from 'prop-types';
 
 /**
  * @param { * } { location, title, children }
@@ -10,11 +10,11 @@ import PropTypes from 'prop-types'
  */
 const Layout = ({ location, title, children }) => {
   // eslint-disable-next-line no-undef
-  const rootPath = `${__PATH_PREFIX__}/`
+  const rootPath = `${__PATH_PREFIX__}/`;
 
-  const isRootPath = location.pathname === rootPath
+  const isRootPath = location.pathname === rootPath;
 
-  let header
+  let header;
 
   // if at index show main header
   if (isRootPath) {
@@ -22,7 +22,7 @@ const Layout = ({ location, title, children }) => {
       <h1 className='main-heading'>
         <Link to='/'>{title}</Link>
       </h1>
-    )
+    );
 
     // else article header
   } else {
@@ -30,7 +30,7 @@ const Layout = ({ location, title, children }) => {
       <Link className='header-link-home' to='/'>
         {title}
       </Link>
-    )
+    );
   }
 
   // return html
@@ -59,21 +59,21 @@ const Layout = ({ location, title, children }) => {
         </a>
       </footer>
     </div>
-  )
-}
+  );
+};
 
 // prop types
 Layout.defaultProps = {
   location: PropTypes.string,
   title: PropTypes.string,
   children: PropTypes.string
-}
+};
 
 // prop types
 Layout.propTypes = {
   location: PropTypes.string,
   title: PropTypes.string,
   children: PropTypes.string
-}
+};
 
-export default Layout
+export default Layout;

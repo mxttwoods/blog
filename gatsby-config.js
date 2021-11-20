@@ -6,7 +6,7 @@ module.exports = {
     title: 'Matthew Codes',
     author: {
       name: 'Matthew Woods',
-      summary: 'UNCG Alumni & Software Developer'
+      summary: 'UNCG Alumni & Software Engineer'
     },
     description: "Matthew Woods's Personal Blog",
     siteUrl: 'https://matthew.codes',
@@ -183,4 +183,4 @@ module.exports = {
     `gatsby-plugin-preact`, // preact plugin
     `gatsby-plugin-offline` // offline pwa support
   ]
-}
+};
