@@ -1,6 +1,6 @@
-import * as React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
-import { StaticImage } from 'gatsby-plugin-image';
+import * as React from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image";
 
 /**
  * Bio component that queries for data
@@ -8,7 +8,7 @@ import { StaticImage } from 'gatsby-plugin-image';
  *
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  *
- * @return { * } data
+ * @return data
  */
 const Bio = () => {
   const data = useStaticQuery(graphql`
@@ -32,27 +32,27 @@ const Bio = () => {
 
   // return html
   return (
-    <div className='bio'>
+    <div className="bio">
       <StaticImage
-        className='bio-avatar'
-        layout='fixed'
-        formats={['AUTO', 'WEBP', 'AVIF']}
-        src='../images/profile-pic.jpg'
+        className="bio-avatar"
+        layout="fixed"
+        formats={["AUTO", "WEBP", "AVIF"]}
+        src="../images/profile-pic.jpg"
         width={50}
         height={50}
         quality={95}
-        alt='Profile picture'
+        alt="Profile picture"
       />
       {author?.name && (
         <p>
-          {' '}
-          Written by{' '}
+          {" "}
+          Written by{" "}
           <a href={social.email}>
             <strong>
               {author.name}
               <br />
             </strong>
-          </a>{' '}
+          </a>{" "}
           {author.summary}
         </p>
       )}

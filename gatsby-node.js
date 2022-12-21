@@ -1,31 +1,18 @@
-/** @format @type { module } */
-const path = require('path');
+const path = require("path");
 
-/** @type { module } */
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
-/**
- * createPages
- *
- * @param { * } { graphql, actions, reporter }
- * @return { * }
- */
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions;
 
   // Define a template for blog post
-
-  const blogPost = path.resolve(`./src/templates/blog-post.tsx`);
+  const blogPost = path.resolve(`./src/templates/blog-post.js`);
 
   // Get all markdown blog posts sorted by date
-
   const result = await graphql(
     `
       {
-        allMarkdownRemark(
-          sort: { fields: [frontmatter___date], order: ASC }
-          limit: 1000
-        ) {
+        allMarkdownRemark(sort: { frontmatter: { date: ASC } }, limit: 1000) {
           nodes {
             id
             fields {
@@ -64,18 +51,13 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         context: {
           id: post.id,
           previousPostId,
-          nextPostId
-        }
+          nextPostId,
+        },
       });
     });
   }
 };
 
-/**
- * onCreateNode
- *
- * @param { * } { node, actions, getNode }
- */
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
 
@@ -86,16 +68,11 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     createNodeField({
       name: `slug`,
       node,
-      value
+      value,
     });
   }
 };
 
-/**
- * createSchemaCustomization
- *
- * @param { * } { actions }
- */
 exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions;
 

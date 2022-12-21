@@ -1,6 +1,6 @@
 ---
 title: a11y
-date: '2020-11-28'
+date: "2020-11-28"
 description:
   The A11y Project is a community-driven effort to make digital accessibility
   easier

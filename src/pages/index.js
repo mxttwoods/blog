@@ -1,20 +1,14 @@
 /* eslint-disable react/no-unescaped-entities */
 
-import * as React from 'react';
-import { Link, graphql } from 'gatsby';
-import PropTypes from 'prop-types';
+import * as React from "react";
+import { Link, graphql } from "gatsby";
+import PropTypes from "prop-types";
 
 // import components
-import Bio from '../components/bio';
-import Layout from '../components/layout';
-import SEO from '../components/seo';
+import Bio from "../components/bio";
+import Layout from "../components/layout";
+import SEO from "../components/seo";
 
-/**
- * BlogIndex
- *
- * @param { * } { data, location }
- * @return { * }
- */
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`;
 
@@ -25,7 +19,7 @@ const BlogIndex = ({ data, location }) => {
     // return html
     return (
       <Layout location={location} title={siteTitle}>
-        <SEO title='Gatsby Error' />
+        <SEO title="Gatsby Error" />
         <Bio />
         <p>
           No blog posts found. Add markdown posts to "content/blog" (or the
@@ -38,7 +32,7 @@ const BlogIndex = ({ data, location }) => {
   // otherwise return all posts (html)
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title='Home' />
+      <SEO title="Home" />
       <Bio />
       <ol style={{ listStyle: `none` }}>
         {posts.map((post) => {
@@ -47,14 +41,14 @@ const BlogIndex = ({ data, location }) => {
           return (
             <li key={post.fields.slug}>
               <article
-                className='post-list-item'
+                className="post-list-item"
                 itemScope
-                itemType='http://schema.org/Article'
+                itemType="http://schema.org/Article"
               >
                 <header>
                   <h2>
-                    <Link to={post.fields.slug} itemProp='url'>
-                      <span itemProp='headline'>{title}</span>
+                    <Link to={post.fields.slug} itemProp="url">
+                      <span itemProp="headline">{title}</span>
                     </Link>
                   </h2>
                   <small>{post.frontmatter.date}</small>
@@ -62,9 +56,9 @@ const BlogIndex = ({ data, location }) => {
                 <section>
                   <p
                     dangerouslySetInnerHTML={{
-                      __html: post.frontmatter.description || post.excerpt
+                      __html: post.frontmatter.description || post.excerpt,
                     }}
-                    itemProp='description'
+                    itemProp="description"
                   />
                 </section>
               </article>
@@ -79,13 +73,13 @@ const BlogIndex = ({ data, location }) => {
 // prop types
 BlogIndex.defaultProps = {
   data: PropTypes.string,
-  location: PropTypes.string
+  location: PropTypes.string,
 };
 
 // prop types
 BlogIndex.propTypes = {
   data: PropTypes.string,
-  location: PropTypes.string
+  location: PropTypes.string,
 };
 
 export default BlogIndex;
@@ -96,7 +90,7 @@ export default BlogIndex;
  *
  * See: https://www.gatsbyjs.com/docs/reference/graphql-data-layer/
  *
- * @return { * } pageQuery
+ * @return pageQuery
  */
 export const pageQuery = graphql`
   query {
@@ -105,7 +99,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(sort: { frontmatter: { date: ASC } }, limit: 1000) {
       nodes {
         excerpt
         fields {

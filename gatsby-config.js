@@ -1,14 +1,14 @@
 module.exports = {
   // main data for pages to query
   siteMetadata: {
-    title: 'Matthew Codes',
+    title: "Matthew Codes",
     author: {
-      name: 'Matthew Woods',
-      summary: 'UNCG Alumni & Software Engineer'
+      name: "Matthew Woods",
+      summary: "UNCG Alumni & Software Engineer",
     },
     description: "Matthew Woods's Personal Blog",
-    siteUrl: 'https://matthew.codes',
-    social: { email: 'mailto:mxttwoods@gmail.com', twitter: 'mxttwoods' }
+    siteUrl: "https://matthew.codes",
+    social: { email: "mailto:mxttwoods@gmail.com", twitter: "mxttwoods" },
   },
   // gatsby plugins
   plugins: [
@@ -17,15 +17,15 @@ module.exports = {
       resolve: `gatsby-source-filesystem`, // file sys routing
       options: {
         path: `${__dirname}/content/blog`, // path to content
-        name: `blog`
-      }
+        name: `blog`,
+      },
     },
     {
       resolve: `gatsby-source-filesystem`, // file sys routing
       options: {
         name: `images`,
-        path: `${__dirname}/src/images` // path to images
-      }
+        path: `${__dirname}/src/images`, // path to images
+      },
     },
     {
       resolve: `gatsby-transformer-remark`, // content transformer
@@ -34,14 +34,14 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`, // transform images
             options: {
-              maxWidth: 630
-            }
+              maxWidth: 630,
+            },
           },
           {
             resolve: `gatsby-remark-responsive-iframe`, // transform iframe
             options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`
-            }
+              wrapperStyle: `margin-bottom: 1.0725rem`,
+            },
           },
           {
             resolve: `gatsby-remark-prismjs`, // transform other languages into html
@@ -106,12 +106,12 @@ module.exports = {
               // Add additional HTML escapes by providing a mapping
               // of HTML entities and their escape value IE: { '}': '&#123;' }
               // escapeEntities: {},
-            }
+            },
           },
           `gatsby-remark-copy-linked-files`, // ??
-          `gatsby-remark-smartypants` // ??
-        ]
-      }
+          `gatsby-remark-smartypants`, // ??
+        ],
+      },
     },
     `gatsby-transformer-sharp`, // image transformer
     `gatsby-plugin-sharp`, // image processor
@@ -139,13 +139,12 @@ module.exports = {
                 date: node.frontmatter.date,
                 url: site.siteMetadata.siteUrl + node.fields.slug,
                 guid: site.siteMetadata.siteUrl + node.fields.slug,
-                custom_elements: [{ 'content:encoded': node.html }]
+                custom_elements: [{ "content:encoded": node.html }],
               })),
+            title: "All Posts",
             query: `
               {
-                allMarkdownRemark(
-                  sort: { order: DESC, fields: [frontmatter___date] },
-                ) {
+                allMarkdownRemark(sort: {frontmatter: {date: DESC}}) {
                   nodes {
                     excerpt
                     html
@@ -160,25 +159,23 @@ module.exports = {
                 }
               }
             `,
-            output: '/rss.xml'
-          }
-        ]
-      }
+            output: "/rss.xml",
+          },
+        ],
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`, // more meta data
       options: {
         name: "Matthew's Personal Blog",
         short_name: "Matthew's Blog",
-        start_url: '/',
-        background_color: '#ffffff',
-        theme_color: '#08f', // main color
-        display: 'minimal-ui',
-        icon: `src/images/gatsby-icon.png` // This path is relative to the root of the site.
-      }
+        start_url: "/",
+        background_color: "#ffffff",
+        theme_color: "#08f", // main color
+        display: "minimal-ui",
+        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+      },
     },
-    `gatsby-plugin-react-helmet`, // header plugin
-    `gatsby-plugin-preact`, // preact plugin
-    `gatsby-plugin-offline` // offline pwa support
-  ]
+    `gatsby-plugin-offline`, // offline pwa support
+  ],
 };

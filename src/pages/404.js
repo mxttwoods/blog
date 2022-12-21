@@ -1,30 +1,23 @@
 /* eslint-disable react/no-unescaped-entities */
-
-import * as React from 'react';
-import { graphql } from 'gatsby';
-import PropTypes from 'prop-types';
+import * as React from "react";
+import { graphql } from "gatsby";
+import PropTypes from "prop-types";
 
 // import components
-import Layout from '../components/layout';
-import SEO from '../components/seo';
+import Layout from "../components/layout";
+import SEO from "../components/seo";
 
-/**
- * ErrorIndex
- *
- * @param { * } { data, location }
- * @return { * }
- */
 const ErrorIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title;
 
   // return html
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title='404 - Not Found' />
-      <h1>404 - Not Found</h1>{' '}
+      <SEO title="404 - Not Found" />
+      <h1>404 - Not Found</h1>{" "}
       <p>
-        You've reached a page that doesn't exist please click{' '}
-        <a href='/'>here</a>
+        You've reached a page that doesn't exist please click{" "}
+        <a href="/">here</a>
       </p>
     </Layout>
   );
@@ -33,13 +26,13 @@ const ErrorIndex = ({ data, location }) => {
 // prop types
 ErrorIndex.defaultProps = {
   data: PropTypes.string,
-  location: PropTypes.string
+  location: PropTypes.string,
 };
 
 // prop types
 ErrorIndex.propTypes = {
   data: PropTypes.string,
-  location: PropTypes.string
+  location: PropTypes.string,
 };
 
 export default ErrorIndex;
@@ -50,7 +43,7 @@ export default ErrorIndex;
  *
  * See: https://www.gatsbyjs.com/docs/reference/graphql-data-layer/
  *
- * @return { * } pageQuery
+ * @return pageQuery
  */
 export const pageQuery = graphql`
   query {
