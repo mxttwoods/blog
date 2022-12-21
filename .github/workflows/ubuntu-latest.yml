@@ -16,14 +16,14 @@ jobs:
           path: |
             public
             .cache
-          key: ${{ runner.os }}-gatsby-build-${{ github.run_id }}
-          restore-keys: ${{ runner.os }}-gatsby-build-
+          key: ${{ runner.os }}-gatsby-v2-build-${{ github.run_id }}
+          restore-keys: ${{ runner.os }}-gatsby-v2-build-
       - name: Checkout
         uses: actions/checkout@v2
       - name: Install
-        run: yarn install
+        run: npm run install
       - name: Build
-        run: yarn build
+        run: npm run build
         env:
           GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES: true
           NODE_ENV: production
