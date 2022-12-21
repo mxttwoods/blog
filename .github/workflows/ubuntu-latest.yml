@@ -46,7 +46,7 @@ jobs:
           name: public
           path: public
       - name: Deploy
-        uses: w9jds/firebase-action@v2.0.0
+        uses: w9jds/firebase-action@v2.2.2
         with:
           args: deploy
         env:
