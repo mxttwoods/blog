@@ -25,28 +25,26 @@
 ## Install
 
 ```bash
-yarn install
+npm ci
 ```
 
 ## Usage
 
 ```bash
-yarn build
+npm run build
 ```
 
 ## Start
 
 ```bash
-yarn start
+npm run start
 ```
 
 ## Structure
 
 ```bash
 .github/**                # ci/cd
-.husky/**                 # git hooks
-content/blog/             # blog content
-    a11y/**                   # blog post
+content/blog/**           # blog content
 src/                      # gatsby source
     components/**             # react components
     images/**                 # images
@@ -66,7 +64,7 @@ static/**                 # static files
 
 ## License
 
-Copyright © 2021 [Matthew Woods](https://github.com/mxttwoods).
+Copyright © 2023 [Matthew Woods](https://github.com/mxttwoods).
 
 This project is
 [MIT](https://github.com/mxttwoods/blog/blob/master/LICENSE) licensed.
