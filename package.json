@@ -19,7 +19,6 @@
     "start": "gatsby serve",
     "clean": "gatsby clean",
     "format": "prettier --write .",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx --fix"
   },
   "dependencies": {
     "@vercel/gatsby-plugin-vercel-builder": "1.0.3",
