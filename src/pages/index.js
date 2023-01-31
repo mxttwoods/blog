@@ -7,10 +7,10 @@ import PropTypes from "prop-types";
 // import components
 import Bio from "../components/bio";
 import Layout from "../components/layout";
-import SEO from "../components/seo";
+import SearchEngineOpt from "../components/seo";
 
 const BlogIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata?.title || `Title`;
+  const siteTitle = data.site.siteMetadata?.title || "Title";
 
   const posts = data.allMarkdownRemark.nodes;
 
@@ -19,7 +19,7 @@ const BlogIndex = ({ data, location }) => {
     // return html
     return (
       <Layout location={location} title={siteTitle}>
-        <SEO title="Gatsby Error" />
+        <SearchEngineOpt title="Gatsby Error" />
         <Bio />
         <p>
           No blog posts found. Add markdown posts to "content/blog" (or the
@@ -32,9 +32,9 @@ const BlogIndex = ({ data, location }) => {
   // otherwise return all posts (html)
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="Home" />
+      <SearchEngineOpt title="Home" />
       <Bio />
-      <ol style={{ listStyle: `none` }}>
+      <ol style={{ listStyle: "none" }}>
         {posts.map((post) => {
           const title = post.frontmatter.title || post.fields.slug;
 

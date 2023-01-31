@@ -34,7 +34,7 @@ const Layout = ({ location, title, children }) => {
       <main>{children}</main>
       <footer>
         © {title} {new Date().getFullYear()},{" "}
-        <img
+        {/* <img
           style={{
             marginLeft: "auto",
             marginRight: "auto",
@@ -50,7 +50,7 @@ const Layout = ({ location, title, children }) => {
           rel="noopener noreferrer"
         >
           Status Page
-        </a>
+        </a> */}
       </footer>
     </div>
   );

@@ -7,44 +7,44 @@ module.exports = {
       summary: "UNCG Alumni & Software Engineer",
     },
     description: "Matthew Woods's Personal Blog",
-    siteUrl: "https://matthew.codes",
+    siteUrl: "https://blog-mxttwoods.vercel.app/",
     social: { email: "mailto:mxttwoods@gmail.com", twitter: "mxttwoods" },
   },
   // gatsby plugins
   plugins: [
-    `gatsby-plugin-image`, // for images
+    "gatsby-plugin-image", // for images
     {
-      resolve: `gatsby-source-filesystem`, // file sys routing
+      resolve: "gatsby-source-filesystem", // file sys routing
       options: {
         path: `${__dirname}/content/blog`, // path to content
-        name: `blog`,
+        name: "blog",
       },
     },
     {
-      resolve: `gatsby-source-filesystem`, // file sys routing
+      resolve: "gatsby-source-filesystem", // file sys routing
       options: {
-        name: `images`,
+        name: "images",
         path: `${__dirname}/src/images`, // path to images
       },
     },
     {
-      resolve: `gatsby-transformer-remark`, // content transformer
+      resolve: "gatsby-transformer-remark", // content transformer
       options: {
         plugins: [
           {
-            resolve: `gatsby-remark-images`, // transform images
+            resolve: "gatsby-remark-images", // transform images
             options: {
               maxWidth: 630,
             },
           },
           {
-            resolve: `gatsby-remark-responsive-iframe`, // transform iframe
+            resolve: "gatsby-remark-responsive-iframe", // transform iframe
             options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`,
+              wrapperStyle: "margin-bottom: 1.0725rem",
             },
           },
           {
-            resolve: `gatsby-remark-prismjs`, // transform other languages into html
+            resolve: "gatsby-remark-prismjs", // transform other languages into html
             options: {
               // Class prefix for <pre> tags containing syntax highlighting;
               // defaults to 'language-' (e.g. <pre class="language-js">).
@@ -108,15 +108,15 @@ module.exports = {
               // escapeEntities: {},
             },
           },
-          `gatsby-remark-copy-linked-files`, // ??
-          `gatsby-remark-smartypants`, // ??
+          "gatsby-remark-copy-linked-files", // ??
+          "gatsby-remark-smartypants", // ??
         ],
       },
     },
-    `gatsby-transformer-sharp`, // image transformer
-    `gatsby-plugin-sharp`, // image processor
+    "gatsby-transformer-sharp", // image transformer
+    "gatsby-plugin-sharp", // image processor
     {
-      resolve: `gatsby-plugin-feed`, // feed object
+      resolve: "gatsby-plugin-feed", // feed object
       options: {
         query: `
           {
@@ -165,7 +165,7 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-manifest`, // more meta data
+      resolve: "gatsby-plugin-manifest", // more meta data
       options: {
         name: "Matthew's Personal Blog",
         short_name: "Matthew's Blog",
@@ -173,9 +173,9 @@ module.exports = {
         background_color: "#ffffff",
         theme_color: "#08f", // main color
         display: "minimal-ui",
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: "src/images/gatsby-icon.png", // This path is relative to the root of the site.
       },
     },
-    `gatsby-plugin-offline`, // offline pwa support
+    "gatsby-plugin-offline", // offline pwa support
   ],
 };

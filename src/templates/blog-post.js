@@ -5,19 +5,19 @@ import PropTypes from "prop-types";
 // import components
 import Bio from "../components/bio";
 import Layout from "../components/layout";
-import SEO from "../components/seo";
+import SearchEngineOpt from "../components/seo";
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark;
 
-  const siteTitle = data.site.siteMetadata?.title || `Title`;
+  const siteTitle = data.site.siteMetadata?.title || "Title";
 
   const { previous, next } = data;
 
   // return html
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO
+      <SearchEngineOpt
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
@@ -42,10 +42,10 @@ const BlogPostTemplate = ({ data, location }) => {
       <nav className="blog-post-nav">
         <ul
           style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "space-between",
+            listStyle: "none",
             padding: 0,
           }}
         >

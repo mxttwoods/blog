@@ -11,7 +11,7 @@ import { useStaticQuery, graphql } from "gatsby";
  *
  * @return site
  */
-const SEO = ({ description, lang, meta, title }) => {
+function SearchEngineOpt({ description, lang, meta, title }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -42,55 +42,54 @@ const SEO = ({ description, lang, meta, title }) => {
       titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
       meta={[
         {
-          name: `description`,
+          name: "description",
           content: metaDescription,
         },
         {
-          property: `og:title`,
+          property: "og:title",
           content: title,
         },
         {
-          property: `og:description`,
+          property: "og:description",
           content: metaDescription,
         },
         {
-          property: `og:type`,
-          content: `website`,
+          property: "og:type",
+          content: "website",
         },
         {
-          name: `twitter:card`,
-          content: `summary`,
+          name: "twitter:card",
+          content: "summary",
         },
         {
-          name: `twitter:creator`,
-          content: site.siteMetadata?.social?.twitter || ``,
+          name: "twitter:creator",
+          content: site.siteMetadata?.social?.twitter || "",
         },
         {
-          name: `twitter:title`,
+          name: "twitter:title",
           content: title,
         },
         {
-          name: `twitter:description`,
+          name: "twitter:description",
           content: metaDescription,
         },
       ].concat(meta)}
     />
   );
-};
+}
 
-// prop types
-SEO.defaultProps = {
-  lang: `en`,
+SearchEngineOpt.defaultProps = {
+  lang: "en",
   meta: [],
-  description: ``,
+  description: "",
+  title: "",
 };
 
-// prop types
-SEO.propTypes = {
+SearchEngineOpt.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
 };
 
-export default SEO;
+export default SearchEngineOpt;

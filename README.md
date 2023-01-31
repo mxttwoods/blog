@@ -20,7 +20,7 @@
   - [Author](#author)
   - [License](#license)
 
-## [Homepage](https://matthew.codes)
+## [Homepage](https://blog-mxttwoods.vercel.app/)
 
 ## Install
 
@@ -57,7 +57,7 @@ static/**                 # static files
 
 **Matthew Woods**
 
-- Website: <https://matthew.codes>
+- Website: <https://blog-mxttwoods.vercel.app/>
 - Twitter: [@mxttwoods](https://twitter.com/mxttwoods)
 - Github: [@mxttwoods](https://github.com/mxttwoods)
 - LinkedIn: [@matthew-t-woods](https://linkedin.com/in/matthew-t-woods)

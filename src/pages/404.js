@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 
 // import components
 import Layout from "../components/layout";
-import SEO from "../components/seo";
+import SearchEngineOpt from "../components/seo";
 
 const ErrorIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title;
@@ -13,7 +13,7 @@ const ErrorIndex = ({ data, location }) => {
   // return html
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="404 - Not Found" />
+      <SearchEngineOpt title="404 - Not Found" />
       <h1>404 - Not Found</h1>{" "}
       <p>
         You've reached a page that doesn't exist please click{" "}

@@ -17,10 +17,12 @@
     "build": "gatsby build",
     "dev": "gatsby develop",
     "start": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "format": "prettier --write .",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx --fix"
   },
   "dependencies": {
-    "@vercel/gatsby-plugin-vercel-builder": "^1.0.3",
+    "@vercel/gatsby-plugin-vercel-builder": "1.0.3",
     "gatsby": "5.5.0",
     "gatsby-plugin-feed": "5.5.0",
     "gatsby-plugin-google-analytics": "5.5.0",
@@ -43,5 +45,8 @@
     "react-helmet": "6.1.0",
     "typeface-merriweather": "1.1.13",
     "typeface-montserrat": "1.1.13"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.3"
   }
 }

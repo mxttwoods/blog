@@ -1,12 +1,12 @@
 const path = require("path");
 
-const { createFilePath } = require(`gatsby-source-filesystem`);
+const { createFilePath } = require("gatsby-source-filesystem");
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions;
 
   // Define a template for blog post
-  const blogPost = path.resolve(`./src/templates/blog-post.js`);
+  const blogPost = path.resolve("./src/templates/blog-post.js");
 
   // Get all markdown blog posts sorted by date
   const result = await graphql(
@@ -27,7 +27,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   // if error stop build
   if (result.errors) {
     reporter.panicOnBuild(
-      `There was an error loading your blog posts`,
+      "There was an error loading your blog posts",
       result.errors
     );
     return;
@@ -62,11 +62,11 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
 
   // if has typeof MarkdownRemark
-  if (node.internal.type === `MarkdownRemark`) {
+  if (node.internal.type === "MarkdownRemark") {
     const value = createFilePath({ node, getNode });
 
     createNodeField({
-      name: `slug`,
+      name: "slug",
       node,
       value,
     });

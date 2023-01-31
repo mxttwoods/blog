@@ -1,56 +1,56 @@
 {
-    "headers": [
+  "headers": [
+    {
+      "source": "/service-worker.js",
+      "headers": [
         {
-            "source": "/service-worker.js",
-            "headers": [
-                {
-                    "key": "Cache-Control",
-                    "value": "public, max-age=0, must-revalidate"
-                }
-            ]
-        },
-        {
-            "source": "/(.*)",
-            "headers": [
-                {
-                    "key": "Content-Security-Policy",
-                    "value": "default-src 'self; img-src 'self' data:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://blog-mxttwoods.vercel.app; style-src 'self' 'unsafe-inline'; font-src 'self' data:; connect-src 'self' https://blog-mxttwoods.vercel.app"
-                },
-                {
-                    "key": "Referer-Policy",
-                    "value": "no-referrer-when-downgrade"
-                },
-                {
-                    "key": "X-Content-Type-Options",
-                    "value": "nosniff"
-                },
-                {
-                    "key": "X-Frame-Options",
-                    "value": "DENY"1
-                },
-                {
-                    "key": "X-XSS-Protection",
-                    "value": "1; mode=block"
-                },
-                {
-                    "X-Robots-Tag": "noindex, nofollow, noarchive, nosnippet"
-                }
-            ]
-        },
-        {
-            "source": "/:path*",
-            "has": [
-                {
-                    "type": "query",
-                    "key": "authorized"
-                }
-            ],
-            "headers": [
-                {
-                    "key": "x-authorized",
-                    "value": "true"
-                }
-            ]
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
         }
-    ]
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self; img-src 'self' data:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://blog-mxttwoods.vercel.app; style-src 'self' 'unsafe-inline'; font-src 'self' data:; connect-src 'self' https://blog-mxttwoods.vercel.app"
+        },
+        {
+          "key": "Referer-Policy",
+          "value": "no-referrer-when-downgrade"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        },
+        {
+          "X-Robots-Tag": "noindex, nofollow, noarchive, nosnippet"
+        }
+      ]
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "query",
+          "key": "authorized"
+        }
+      ],
+      "headers": [
+        {
+          "key": "x-authorized",
+          "value": "true"
+        }
+      ]
+    }
+  ]
 }
