@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    name: Build
+    name: Node.js Build
     runs-on: ubuntu-latest
     steps:
       - name: Use Node.js
@@ -31,27 +31,3 @@ jobs:
         run: npm run build
         env:
           NODE_ENV: production
-      - name: Archive
-        uses: actions/upload-artifact@v3
-        with:
-          name: public
-          path: public
-
-  deploy:
-    name: Deploy
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Download
-        uses: actions/download-artifact@v3
-        with:
-          name: public
-          path: public
-      - name: Deploy
-        uses: w9jds/firebase-action@v11.18.0
-        with:
-          args: deploy
-        env:
-          FIREBASE_TOKEN: ${{secrets.FIREBASE_TOKEN}}
