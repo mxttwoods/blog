@@ -1,6 +1,15 @@
 {
   "headers": [
     {
+      "source": "/service-worker.js",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    },
+    {
       "source": "/(.*)",
       "headers": [
         {
@@ -24,7 +33,8 @@
           "value": "1; mode=block"
         },
         {
-          "X-Robots-Tag": "noindex, nofollow, noarchive, nosnippet"
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow, noarchive, nosnippet"
         }
       ]
     }
