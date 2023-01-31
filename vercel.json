@@ -18,7 +18,7 @@
         },
         {
           "key": "Referer-Policy",
-          "value": "no-referrer-when-downgrade"
+          "value": "no-referrer"
         },
         {
           "key": "X-Content-Type-Options",
@@ -35,6 +35,10 @@
         {
           "key": "X-Robots-Tag",
           "value": "noindex, nofollow, noarchive, nosnippet"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "geolocation=(), microphone=()"
         }
       ]
     }
