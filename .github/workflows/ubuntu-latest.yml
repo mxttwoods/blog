@@ -1,34 +1,39 @@
 name: Nodejs Ubuntu CI/CD
 on:
   push:
+    branches: [main]
   pull_request:
-  workflow_dispatch:
+    branches: [main]
 
 jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
     steps:
+      - name: Use Node.js 19
+        uses: actions/setup-node@v3
+        with:
+          node-version: "19.x"
       - name: Caching Gatsby
         id: gatsby-cache-build
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: |
             public
             .cache
-          key: ${{ runner.os }}-gatsby-v2-build-${{ github.run_id }}
-          restore-keys: ${{ runner.os }}-gatsby-v2-build-
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Install
-        run: npm run install
-      - name: Build
+          key: ${{ runner.os }}-gatsby-v3-build-${{ github.run_id }}
+          restore-keys: ${{ runner.os }}-gatsby-v3-build-
+      - name: Git Checkout
+        uses: actions/checkout@v3
+      - name: Clean Install
+        run: npm ci
+      - name: Gatsby Build
         run: npm run build
         env:
           GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES: true
           NODE_ENV: production
       - name: Archive
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: public
           path: public
@@ -39,9 +44,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Download
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: public
           path: public
