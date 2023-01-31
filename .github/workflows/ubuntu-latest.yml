@@ -10,11 +10,12 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-      - name: Use Node.js 19
+      - name: Use Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "19.5.0"
+          node-version: "lts/*"
           cache: "npm"
+          cache-dependency-path: package-lock.json
       - name: Caching Gatsby
         id: gatsby-cache-build
         uses: actions/cache@v3
@@ -31,7 +32,6 @@ jobs:
       - name: Gatsby Build
         run: npm run build
         env:
-          GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES: true
           NODE_ENV: production
       - name: Archive
         uses: actions/upload-artifact@v3
