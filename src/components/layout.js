@@ -33,24 +33,7 @@ const Layout = ({ location, title, children }) => {
       <header className="global-header">{header}</header>
       <main>{children}</main>
       <footer>
-        © {title} {new Date().getFullYear()},{" "}
-        {/* <img
-          style={{
-            marginLeft: "auto",
-            marginRight: "auto",
-            marginBottom: "auto",
-            marginTop: "auto",
-          }}
-          src="https://img.icons8.com/fluent/15/000000/checked.png"
-          alt="Checked Icon"
-        />{" "}
-        <a
-          href="https://stats.uptimerobot.com/7WlovcmwBA"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Status Page
-        </a> */}
+        © {title} {new Date().getFullYear()}
       </footer>
     </div>
   );
