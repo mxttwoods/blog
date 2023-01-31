@@ -68,18 +68,12 @@ const BlogPostTemplate = ({ data, location }) => {
     </Layout>
   );
 };
-
-// prop types
-BlogPostTemplate.defaultProps = {
-  data: PropTypes.string,
-  location: PropTypes.string,
+const props = {
+  data: PropTypes.object,
+  location: PropTypes.object,
 };
-
-// prop types
-BlogPostTemplate.propTypes = {
-  data: PropTypes.string,
-  location: PropTypes.string,
-};
+BlogPostTemplate.defaultProps = props;
+BlogPostTemplate.propTypesprops = props;
 
 export default BlogPostTemplate;
 

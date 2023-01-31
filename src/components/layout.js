@@ -56,18 +56,13 @@ const Layout = ({ location, title, children }) => {
   );
 };
 
-// prop types
-Layout.defaultProps = {
-  location: PropTypes.string,
+const props = {
+  location: PropTypes.object,
   title: PropTypes.string,
-  children: PropTypes.string,
+  children: PropTypes.array,
 };
 
-// prop types
-Layout.propTypes = {
-  location: PropTypes.string,
-  title: PropTypes.string,
-  children: PropTypes.string,
-};
+Layout.defaultProps = props;
+Layout.propTypes = props;
 
 export default Layout;

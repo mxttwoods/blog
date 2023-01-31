@@ -23,17 +23,12 @@ const ErrorIndex = ({ data, location }) => {
   );
 };
 
-// prop types
-ErrorIndex.defaultProps = {
-  data: PropTypes.string,
+const props = {
+  data: PropTypes.object,
   location: PropTypes.string,
 };
-
-// prop types
-ErrorIndex.propTypes = {
-  data: PropTypes.string,
-  location: PropTypes.string,
-};
+ErrorIndex.defaultProps = props;
+ErrorIndex.propTypes = props;
 
 export default ErrorIndex;
 

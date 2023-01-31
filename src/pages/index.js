@@ -70,17 +70,12 @@ const BlogIndex = ({ data, location }) => {
   );
 };
 
-// prop types
-BlogIndex.defaultProps = {
-  data: PropTypes.string,
-  location: PropTypes.string,
+const props = {
+  data: PropTypes.object,
+  location: PropTypes.object,
 };
-
-// prop types
-BlogIndex.propTypes = {
-  data: PropTypes.string,
-  location: PropTypes.string,
-};
+BlogIndex.defaultProps = props;
+BlogIndex.propTypes = props;
 
 export default BlogIndex;
 
