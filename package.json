@@ -18,7 +18,7 @@
     "dev": "gatsby develop",
     "start": "gatsby serve",
     "clean": "gatsby clean",
-    "format": "prettier --write .",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@vercel/gatsby-plugin-vercel-builder": "1.0.3",
