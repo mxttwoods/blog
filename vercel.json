@@ -18,7 +18,7 @@
         },
         {
           "key": "Referer-Policy",
-          "value": "no-referrer"
+          "value": "strict-origin-when-cross-origin"
         },
         {
           "key": "X-Content-Type-Options",
@@ -38,7 +38,11 @@
         },
         {
           "key": "Permissions-Policy",
-          "value": "geolocation=(), microphone=()"
+          "value": "geolocation=(), microphone=(), camera=()"
+        },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=63072000; includeSubDomains; preload"
         }
       ]
     }
