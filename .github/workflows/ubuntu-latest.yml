@@ -14,16 +14,16 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: "19.5.0"
-          # cache: "npm"
-      # - name: Caching Gatsby
-      #   id: gatsby-cache-build
-      #   uses: actions/cache@v3
-      #   with:
-      #     path: |
-      #       public
-      #       .cache
-      #     key: ${{ runner.os }}-gatsby-v3-build-${{ github.run_id }}
-      #     restore-keys: ${{ runner.os }}-gatsby-v3-build-
+          cache: "npm"
+      - name: Caching Gatsby
+        id: gatsby-cache-build
+        uses: actions/cache@v3
+        with:
+          path: |
+            public
+            .cache
+          key: ${{ runner.os }}-gatsby-v3-build-${{ github.run_id }}
+          restore-keys: ${{ runner.os }}-gatsby-v3-build-
       - name: Git Checkout
         uses: actions/checkout@v3
       - name: Clean Install
