@@ -24,7 +24,7 @@ jobs:
           key: ${{ runner.os }}-gatsby-v3-build-${{ github.run_id }}
           restore-keys: ${{ runner.os }}-gatsby-v3-build-
       - name: Git Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Clean Install
         run: npm ci
       - name: Gatsby Build
