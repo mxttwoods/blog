@@ -21,7 +21,7 @@
     "format": "prettier --write ."
   },
   "dependencies": {
-    "@vercel/gatsby-plugin-vercel-builder": "2.0.6",
+    "@vercel/gatsby-plugin-vercel-builder": "2.0.7",
     "gatsby": "5.12.5",
     "gatsby-plugin-feed": "5.12.0",
     "gatsby-plugin-google-analytics": "5.12.0",
