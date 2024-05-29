@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "@vercel/gatsby-plugin-vercel-builder": "2.0.31",
-    "gatsby": "5.13.5",
+    "gatsby": "5.13.6",
     "gatsby-plugin-feed": "5.13.1",
     "gatsby-plugin-google-analytics": "5.13.1",
     "gatsby-plugin-image": "3.13.1",
